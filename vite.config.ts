@@ -17,5 +17,10 @@ export default defineConfig(({ mode }) => {
       },
     },
     assetsInclude: ['./src/assets/**/*'],
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './src/tests/setup.ts',
+    },
   }
 })
